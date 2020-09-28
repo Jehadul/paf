@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/WEB-INF/tiles/template/template.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/template/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/template/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+	</definition>
+
+	<definition name="base.definition2" template="/WEB-INF/views/login.jsp">
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+
+	<!-- Login Page -->
+	<definition name="login" extends="base.definition2">
+		<put-attribute name="title" value="Login Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+	</definition>
+
+	<!-- Home Page Start-->
+	<definition name="index" extends="base-definition">
+		<put-attribute name="title" value="Dashboard | PRMS" />
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+	<definition name="selectCompany" extends="base-definition">
+		<put-attribute name="title" value="Dashboard | PRMS" />
+		<put-attribute name="body" value="/WEB-INF/views/selectCompany.jsp" />
+	</definition>
+
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Dashboard | PAF" />
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	
+	<definition name="myProfile" extends="base-definition">
+		<put-attribute name="title" value="My Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/myProfile.jsp" />
+	</definition>	
+	<!-- Home Page End-->
+
+	<!-- Company Start -->
+	<definition name="addCompany" extends="base-definition">
+		<put-attribute name="title" value="Add New Company" />
+		<put-attribute name="body" value="/WEB-INF/views/company/create.jsp" />
+	</definition>
+
+	<definition name="editCompany" extends="base-definition">
+		<put-attribute name="title" value="Edit Company" />
+		<put-attribute name="body" value="/WEB-INF/views/company/edit.jsp" />
+	</definition>
+
+	<definition name="companyList" extends="base-definition">
+		<put-attribute name="title" value="Company List" />
+		<put-attribute name="body" value="/WEB-INF/views/company/list.jsp" />
+	</definition>
+
+	<definition name="showCompany" extends="base-definition">
+		<put-attribute name="title" value="Show Company" />
+		<put-attribute name="body" value="/WEB-INF/views/company/show.jsp" />
+	</definition>
+	<!-- Company End -->
+
+	<!-- PAF Year Start -->
+	<definition name="addPafYear" extends="base-definition">
+		<put-attribute name="title" value="Add New PAF Year" />
+		<put-attribute name="body" value="/WEB-INF/views/pafYear/create.jsp" />
+	</definition>
+
+	<definition name="editPafYear" extends="base-definition">
+		<put-attribute name="title" value="Edit PAF Year" />
+		<put-attribute name="body" value="/WEB-INF/views/pafYear/edit.jsp" />
+	</definition>
+
+	<definition name="pafYearList" extends="base-definition">
+		<put-attribute name="title" value="PAF Year List" />
+		<put-attribute name="body" value="/WEB-INF/views/pafYear/list.jsp" />
+	</definition>
+
+	<definition name="showPafYear" extends="base-definition">
+		<put-attribute name="title" value="Show PAF Year" />
+		<put-attribute name="body" value="/WEB-INF/views/pafYear/show.jsp" />
+	</definition>
+	<!-- PAF Year End -->
+
+	<!-- PAF Manage Start -->
+	<definition name="addPafManage" extends="base-definition">
+		<put-attribute name="title" value="Add New PAF Manage" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pafManage/create.jsp" />
+	</definition>
+
+	<definition name="editPafManage" extends="base-definition">
+		<put-attribute name="title" value="Edit PAF Manage" />
+		<put-attribute name="body" value="/WEB-INF/views/pafManage/edit.jsp" />
+	</definition>
+
+	<definition name="pafManageList" extends="base-definition">
+		<put-attribute name="title" value="PAF Manage List" />
+		<put-attribute name="body" value="/WEB-INF/views/pafManage/list.jsp" />
+	</definition>
+
+	<definition name="showPafManage" extends="base-definition">
+		<put-attribute name="title" value="Show PAF Manage" />
+		<put-attribute name="body" value="/WEB-INF/views/pafManage/show.jsp" />
+	</definition>
+	<!-- PAF Year End -->
+
+	<!-- paf mst Start -->
+	<definition name="pafEligibleList" extends="base-definition">
+		<put-attribute name="title" value="PAF Eligible Employee List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pafMst/pafEligibleList.jsp" />
+	</definition>
+
+	<definition name="pafMstList" extends="base-definition">
+		<put-attribute name="title" value="PAF List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pafMst/pafMstList.jsp" />
+	</definition>
+	
+	<definition name="myPafMstList" extends="base-definition">
+		<put-attribute name="title" value="PAF List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pafMst/myPafMstList.jsp" />
+	</definition>
+	
+	<definition name="superPafMstList" extends="base-definition">
+		<put-attribute name="title" value="PAF List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pafMst/superPafMstList.jsp" />
+	</definition>
+
+	<!-- paf mst End -->
+	<definition name="pafForm" extends="base-definition">
+		<put-attribute name="title" value="PAF Form" />
+		<put-attribute name="body" value="/WEB-INF/views/pafMst/pafForm.jsp" />
+	</definition>
+
+</tiles-definitions>
